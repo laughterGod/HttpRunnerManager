@@ -6,6 +6,13 @@ Design Philosophy
 
 基于HttpRunner的接口自动化测试平台: `HttpRunner`_, `djcelery`_ and `Django`_. HttpRunner手册: http://cn.httprunner.org/
 
+特别注意：python3.7.6 Django+celery踩坑
+1.报错”from kombu.async.timer import Entry, Timer as Schedule, to_timestamp, logger”，
+
+这是因为在 python 3.7 中将 async 作为了关键字，所以当 py 文件中出现类似 from . import async, base 这类不符合python语法的语句时，Python会报错；
+解决方法： 在 celery 官方的提议下，建议将 kombu下的async.py 文件的文件名改成 asynchronous.py；然后把引用和这个文件的所有文件的里面的async改为asynchronous；
+celery下文件引用async的有：celery/worker/consumer.py  celery/worker/autoscale.py   celery/worker/components.py    celery/concurrency/asynpool.py    celery/utils/timer2.py
+
 Key Features
 ------------
 
