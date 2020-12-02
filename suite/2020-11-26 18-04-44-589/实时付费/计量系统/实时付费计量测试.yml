@@ -1,0 +1,9 @@
+-   config:
+        name: "\u5B9E\u65F6\u4ED8\u8D39\u8BA1\u91CF\u6D4B\u8BD5"
+        request:
+            base_url: http://10.111.94.91:9377
+-   test:
+        name: "\u5B9E\u65F6\u4ED8\u8D39\u8BA1\u91CF\u6D4B\u8BD5"
+        request:
+            method: GET
+            url: www.baidu.com
