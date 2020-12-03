@@ -6,7 +6,7 @@ import sys
 
 import paramiko
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse, StreamingHttpResponse
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, redirect
 from django.utils.safestring import mark_safe
 from djcelery.models import PeriodicTask
 from dwebsocket import accept_websocket
@@ -800,3 +800,15 @@ def echo(request):
             for i, line in enumerate(stdout):
                 request.websocket.send(bytes(line, encoding='utf8'))
             client.close()
+
+
+@login_check
+def flower(request):
+    """
+    跳转Flower监控页面
+    :param request:
+    :return:
+    """
+    host = request.get_host()[0 : -5]
+    return redirect("http://{}:5555/dashboard".format(host))
+
