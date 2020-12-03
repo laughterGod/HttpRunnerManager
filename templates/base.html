@@ -12,25 +12,25 @@
 
     {% load staticfiles %}
     <meta name="apple-mobile-web-app-title" content="HttpRunnerManager"/>
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap-fileinput/4.4.8/css/fileinput.css"/>
-    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap-fileinput/4.4.8/js/fileinput.js"></script>
-    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap-fileinput/4.4.8/js/fileinput.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap-fileinput/4.4.8/css/fileinput.min.css"/>
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" href="{% static 'assets/css/fileinput.css' %}"/>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/fileinput.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/fileinput.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'assets/css/fileinput.min.css' %}"/>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/amazeui/2.7.2/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/css/amazeui.min.css' %}"/>
     <link rel="stylesheet" href="{% static 'assets/css/admin.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/common.css' %}">
 
-    <script src="https://cdn.bootcss.com/amazeui/2.7.2/js/amazeui.min.js"></script>
-    <script src="https://cdn.bootcss.com/jquery.serializeJSON/2.9.0/jquery.serializejson.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript"
+    <script src="{% static 'assets/js/amazeui.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.serializejson.min.js' %}"></script>
+    <script src="{% static 'assets/js/ace.js' %}" type="text/javascript"
             charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ext-language_tools.js" type="text/javascript"
+    <script src="{% static 'assets/js/ext-language_tools.js' %}" type="text/javascript"
             charset="utf-8"></script>
-    <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="{% static 'assets/js/jquery-ui.min.js' %}"></script>
 
     <script src="{% static 'assets/js/app.js' %}"></script>
     <script src="{% static 'assets/js/commons.js' %}"></script>
@@ -98,7 +98,7 @@
             <ul>
                 <li><a href="/api/project_list/1/">项 目 列 表</a></li>
                 <li><a href="/api/add_project/">新 增 项 目</a></li>
-                <li><a href="/api/debugtalk_list/1/">debugtalk.py</a></li>
+                <li><a href="/api/debugtalk_list/1/">自定义函数</a></li>
             </ul>
             <h3 class="am-icon-th-list"><em></em> <a href="#"> 模块管理</a></h3>
             <ul>
@@ -109,6 +109,7 @@
             <ul>
                 <li><a href="/api/add_case/">新 增 用 例</a></li>
                 <li><a href="/api/test_list/1/">用 例 列 表</a></li>
+                <li><a href="/api/data_list/1/">数 据 列 表</a></li>
             </ul>
 
             <h3 class="am-icon-tags"><em></em> <a href="#">配置管理</a></h3>
@@ -131,7 +132,7 @@
             <h3 class="am-icon-gears"><em></em> <a href="#">系统设置</a></h3>
             <ul>
                 <li><a href="/api/env_list/1/">运 行 环 境</a></li>
-                <li><a href="http://120.92.155.170:5555/dashboard">任 务 监 控</a></li>
+                <li><a href="/api/flower" target="_blank">任 务 监 控</a></li>
               {% comment %}  <li><a href="/api/echo/">实验室</a></li>{% endcomment %}
             </ul>
         </div>
@@ -197,7 +198,8 @@
     {% endblock %}
 
     <script type="text/javascript">
-        jQuery(".sideMenu").slide({
+        $(".sideMenu").slide({
+            trigger: "mouseclick", //触发方式:mouseclick、mouseover
             titCell: "h3", //鼠标触发对象
             targetCell: "ul", //与titCell一一对应，第n个titCell控制第n个targetCell的显示隐藏
             effect: "slideDown", //targetCell下拉效果
