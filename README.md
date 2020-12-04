@@ -11,7 +11,13 @@ Design Philosophy
 
 这是因为在 python 3.7 中将 async 作为了关键字，所以当 py 文件中出现类似 from . import async, base 这类不符合python语法的语句时，Python会报错；
 解决方法： 在 celery 官方的提议下，建议将 kombu下的async文件夹的文件夹名改成 asynchronous；然后把引用和这个文件的所有文件的里面的async改为asynchronous；
-celery下文件引用async的有：celery/worker/consumer.py  celery/worker/autoscale.py   celery/worker/components.py    celery/concurrency/asynpool.py    celery/utils/timer2.py
+celery下文件引用async的有：
+celery/worker/consumer.py  
+celery/worker/autoscale.py   
+celery/worker/components.py
+celery/worker/strategy.py
+celery/concurrency/asynpool.py    
+celery/utils/timer2.py
 
 Key Features
 ------------
