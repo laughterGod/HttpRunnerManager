@@ -97,8 +97,11 @@ Key Features
 9. 启动worker, 如果选择同步执行并确保不会使用到定时任务，那么此步骤可忽略
     ```bash
         python manage.py celery -A HttpRunnerManager worker --loglevel=info  #启动worker
+        (nohup python3 manage.py celery -A HttpRunnerManager worker --loglevel=info >> ./logs/worker.log 2>&1 &)
         python manage.py celery beat --loglevel=info #启动定时任务监听器
+        (nohup python3 manage.py celery beat --loglevel=info >> ./logs/beat.log 2>&1 &)
         python manage.py celery flower #启动任务监控后台
+        (nohup python3 manage.py celery flower >> ./logs/flower.log 2>&1 &)
     ```
 
 10. 访问：http://localhost:5555/dashboard 即可查看任务列表和状态
