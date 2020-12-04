@@ -17,7 +17,15 @@ celery/worker/autoscale.py
 celery/worker/components.py  
 celery/worker/strategy.py  
 celery/concurrency/asynpool.py    
-celery/utils/timer2.py  
+celery/utils/timer2.py 
+
+
+2.django.db.utils.IntegrityError: (1364, "Field 'state' doesn't have a default value")
+解决方式：
+（1）.字段是非空没有默认值，但是你的插入语句里面又没有插入SEQ这个字段，所以报错。
+（2）.sql模式问题：
+执行：
+SET @@GLOBAL.sql_mode="NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION";
 
 Key Features
 ------------
