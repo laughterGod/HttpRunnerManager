@@ -14,10 +14,10 @@ Design Philosophy
 celery下文件引用async的有：
 celery/worker/consumer.py  
 celery/worker/autoscale.py   
-celery/worker/components.py
-celery/worker/strategy.py
+celery/worker/components.py  
+celery/worker/strategy.py  
 celery/concurrency/asynpool.py    
-celery/utils/timer2.py
+celery/utils/timer2.py  
 
 Key Features
 ------------
@@ -51,7 +51,7 @@ Key Features
     }
 
     EMAIL_SEND_USERNAME = 'username@163.com'  # 定时任务报告发送邮箱，支持163,qq,sina,企业qq邮箱等，注意需要开通smtp服务
-    EMAIL_SEND_PASSWORD = 'password'     # 邮箱密码
+    EMAIL_SEND_PASSWORD = 'password'     # 邮箱密码（授权码）
     ```
 3. 安装rabbitmq消息中间件，启动服务，访问：http://host:15672/#/ host即为你部署rabbitmq的服务器ip地址
    username：guest、Password：guest, 成功登陆即可
@@ -98,7 +98,7 @@ Key Features
     ```bash
         python manage.py celery -A HttpRunnerManager worker --loglevel=info  #启动worker
         python manage.py celery beat --loglevel=info #启动定时任务监听器
-        celery flower #启动任务监控后台
+        python manage.py celery flower #启动任务监控后台
     ```
 
 10. 访问：http://localhost:5555/dashboard 即可查看任务列表和状态
