@@ -8,7 +8,6 @@ pyunitreport/__pycache__/
 BeautifulReport/__pycache__/
 Test Report.html
 ApiManager/templatetags/*.pyc
-logs/*
 db.sqlite3
 nohup*
 settings.py
