@@ -1,4 +1,5 @@
 .idea/
+*__pycache__/
 ApiManager/__pycache__/
 ApiManager/logic/__pycache__/
 ApiManager/migrations/__pycache__/
