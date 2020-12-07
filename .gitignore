@@ -12,3 +12,5 @@ ApiManager/templatetags/*.pyc
 db.sqlite3
 nohup*
 settings.py
+ApiManager/templatetags/__pycache__/
+ApiManager/utils/__pycache__/
