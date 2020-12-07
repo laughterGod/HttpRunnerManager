@@ -1,0 +1,22 @@
+-   config:
+        name: httpbin_get
+        request:
+            base_url: http://www.httpbin.org
+-   test:
+        extract:
+        -   request_name: content.args.name
+        -   request_password: content.args.password
+        name: httpbin_get
+        parameters:
+        -   xx-yy: '[[''spf1'',''666''],[''spf2'',''888'']]'
+        request:
+            headers:
+                accept: application/json
+            method: GET
+            params:
+                commn: $commn_user
+                name: $xx
+                password: $yy
+            url: http://httpbin.org/get
+        variables:
+        -   commn_user: '123'

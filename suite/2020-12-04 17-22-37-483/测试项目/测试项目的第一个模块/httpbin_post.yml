@@ -1,0 +1,21 @@
+-   config:
+        name: httpbin_post
+        request:
+            base_url: ''
+-   test:
+        extract:
+        -   r_user: content.form.user
+        -   r_code: status_code
+        name: httpbin_post
+        request:
+            data:
+                user: spf
+            method: POST
+            url: http://httpbin.org/post
+        validate:
+        -   check: $r_user
+            comparator: equals
+            expected: spf
+        -   check: $r_code
+            comparator: equals
+            expected: 200

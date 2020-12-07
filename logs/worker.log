@@ -1,0 +1,67 @@
+nohup: ignoring input
+/usr/local/python3/lib/python3.7/site-packages/celery/platforms.py:812: RuntimeWarning: You are running the worker with superuser privileges, which is
+absolutely not recommended!
+
+Please specify a different user using the -u option.
+
+User information: uid=0 euid=0 gid=0 egid=0
+
+  uid=uid, euid=euid, gid=gid, egid=egid,
+[2020-12-04 19:07:59,487: INFO/MainProcess] Connected to amqp://celery:**@120.92.155.170:5672//
+[2020-12-04 19:07:59,498: INFO/MainProcess] mingle: searching for neighbors
+[2020-12-04 19:08:00,509: INFO/MainProcess] mingle: all alone
+[2020-12-04 19:08:00,521: WARNING/MainProcess] /usr/local/python3/lib/python3.7/site-packages/celery/fixups/django.py:265: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+[2020-12-04 19:08:00,522: WARNING/MainProcess] celery@vm10-146-16-10.ksc.com ready.
+[2020-12-04 19:08:00,523: INFO/MainProcess] Received task: ApiManager.tasks.main_hrun[2101ad5b-c28c-4732-85b3-8ca299acee97]
+[2020-12-04 19:08:00,526: WARNING/Worker-1] /usr/local/python3/lib/python3.7/site-packages/httprunner/utils.py:70: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  yaml_content = yaml.load(stream)
+[2020-12-04 19:08:00,537: WARNING/Worker-1] [33m实时付费计量测试
+[2020-12-04 19:08:00,537: INFO/Worker-1] [32mGET http://httpbin.org/get
+[2020-12-04 19:08:00,537: WARNING/Worker-1] [32m[47mINFO    [0m [32mGET http://httpbin.org/get[0m
+[2020-12-04 19:08:00,786: INFO/MainProcess] Events of group {task} enabled by remote.
+[2020-12-04 19:08:02,013: INFO/Worker-1] [32mstatus_code: 200, response_time(ms): 1474.99 ms, response_length: 307 bytes
+[2020-12-04 19:08:02,013: WARNING/Worker-1] [32m[47mINFO    [0m [32mstatus_code: 200, response_time(ms): 1474.99 ms, response_length: 307 bytes[0m
+[2020-12-04 19:08:02,013: WARNING/Worker-1] .
+[2020-12-04 19:08:02,013: WARNING/Worker-1] ----------------------------------------------------------------------
+[2020-12-04 19:08:02,013: WARNING/Worker-1] Ran 1 test in 1.477s
+[2020-12-04 19:08:02,014: WARNING/Worker-1] OK
+[2020-12-04 19:08:02,014: INFO/Worker-1] [32mrender with html report template: /home/MyProject/HttpRunnerManager/templates/extent_report_template.html
+[2020-12-04 19:08:02,014: WARNING/Worker-1] [32m[47mINFO    [0m [32mrender with html report template: /home/MyProject/HttpRunnerManager/templates/extent_report_template.html[0m
+[2020-12-04 19:08:02,014: INFO/Worker-1] [32mStart to render Html report ...
+[2020-12-04 19:08:02,014: WARNING/Worker-1] [32m[47mINFO    [0m [32mStart to render Html report ...[0m
+[2020-12-04 19:08:02,068: INFO/Worker-1] [32mGenerated Html report: /home/MyProject/HttpRunnerManager/reports/1607080080.html
+[2020-12-04 19:08:02,068: WARNING/Worker-1] [32m[47mINFO    [0m [32mGenerated Html report: /home/MyProject/HttpRunnerManager/reports/1607080080.html[0m
+[2020-12-04 19:08:02,100: INFO/MainProcess] Task ApiManager.tasks.main_hrun[2101ad5b-c28c-4732-85b3-8ca299acee97] succeeded in 1.5762342922389507s: None
+[2020-12-04 19:12:31,030: INFO/MainProcess] Received task: celery.backend_cleanup[b3612364-0de0-4fcd-99dc-54205b677fde]
+[2020-12-04 19:12:31,060: INFO/MainProcess] Task celery.backend_cleanup[b3612364-0de0-4fcd-99dc-54205b677fde] succeeded in 0.02804075926542282s: None
+[2020-12-04 19:13:52,265: INFO/MainProcess] Received task: ApiManager.tasks.main_hrun[4d61833b-f008-407a-a153-bee89be64889]
+[2020-12-04 19:13:52,267: WARNING/Worker-1] /usr/local/python3/lib/python3.7/site-packages/httprunner/utils.py:70: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  yaml_content = yaml.load(stream)
+[2020-12-04 19:13:52,270: WARNING/Worker-1] [33m实时付费计量测试
+[2020-12-04 19:13:52,270: INFO/Worker-1] [32mGET http://httpbin.org/get
+[2020-12-04 19:13:52,270: WARNING/Worker-1] [32m[47mINFO    [0m [32mGET http://httpbin.org/get[0m
+[2020-12-04 19:13:52,270: WARNING/Worker-1] [32m[47mINFO    [0m [32mGET http://httpbin.org/get[0m
+[2020-12-04 19:13:52,899: INFO/Worker-1] [32mstatus_code: 200, response_time(ms): 628.04 ms, response_length: 307 bytes
+[2020-12-04 19:13:52,899: WARNING/Worker-1] [32m[47mINFO    [0m [32mstatus_code: 200, response_time(ms): 628.04 ms, response_length: 307 bytes[0m
+[2020-12-04 19:13:52,899: WARNING/Worker-1] [32m[47mINFO    [0m [32mstatus_code: 200, response_time(ms): 628.04 ms, response_length: 307 bytes[0m
+[2020-12-04 19:13:52,899: WARNING/Worker-1] .
+[2020-12-04 19:13:52,899: WARNING/Worker-1] ----------------------------------------------------------------------
+[2020-12-04 19:13:52,899: WARNING/Worker-1] Ran 1 test in 0.630s
+[2020-12-04 19:13:52,899: WARNING/Worker-1] OK
+[2020-12-04 19:13:52,900: INFO/Worker-1] [32mrender with html report template: /home/MyProject/HttpRunnerManager/templates/extent_report_template.html
+[2020-12-04 19:13:52,900: WARNING/Worker-1] [32m[47mINFO    [0m [32mrender with html report template: /home/MyProject/HttpRunnerManager/templates/extent_report_template.html[0m
+[2020-12-04 19:13:52,900: WARNING/Worker-1] [32m[47mINFO    [0m [32mrender with html report template: /home/MyProject/HttpRunnerManager/templates/extent_report_template.html[0m
+[2020-12-04 19:13:52,900: INFO/Worker-1] [32mStart to render Html report ...
+[2020-12-04 19:13:52,900: WARNING/Worker-1] [32m[47mINFO    [0m [32mStart to render Html report ...[0m
+[2020-12-04 19:13:52,900: WARNING/Worker-1] [32m[47mINFO    [0m [32mStart to render Html report ...[0m
+[2020-12-04 19:13:52,950: INFO/Worker-1] [32mGenerated Html report: /home/MyProject/HttpRunnerManager/reports/1607080432.html
+[2020-12-04 19:13:52,950: WARNING/Worker-1] [32m[47mINFO    [0m [32mGenerated Html report: /home/MyProject/HttpRunnerManager/reports/1607080432.html[0m
+[2020-12-04 19:13:52,950: WARNING/Worker-1] [32m[47mINFO    [0m [32mGenerated Html report: /home/MyProject/HttpRunnerManager/reports/1607080432.html[0m
+[2020-12-04 19:13:52,980: INFO/MainProcess] Task ApiManager.tasks.main_hrun[4d61833b-f008-407a-a153-bee89be64889] succeeded in 0.7142695635557175s: None
+[2020-12-05 04:00:00,007: INFO/MainProcess] Received task: celery.backend_cleanup[ae972eaf-e080-4f89-8752-994a91ad85a0]
+[2020-12-05 04:00:00,044: INFO/MainProcess] Task celery.backend_cleanup[ae972eaf-e080-4f89-8752-994a91ad85a0] succeeded in 0.034738171845674515s: None
+[2020-12-06 04:00:00,009: INFO/MainProcess] Received task: celery.backend_cleanup[b620a287-dada-47e2-ae1e-bae11d3859b2]
+[2020-12-06 04:00:00,046: INFO/MainProcess] Task celery.backend_cleanup[b620a287-dada-47e2-ae1e-bae11d3859b2] succeeded in 0.03502919524908066s: None
+[2020-12-07 04:00:00,007: INFO/MainProcess] Received task: celery.backend_cleanup[a394da1a-892a-4a61-8db4-74b76566b2ca]
+[2020-12-07 04:00:00,045: INFO/MainProcess] Task celery.backend_cleanup[a394da1a-892a-4a61-8db4-74b76566b2ca] succeeded in 0.034862011671066284s: None

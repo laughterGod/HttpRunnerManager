@@ -1,0 +1,57 @@
+-   config:
+        name: "httpbin_\u7B80\u5355\u7528\u4F8B\u7EC4\u5408"
+        request:
+            base_url: ''
+-   test:
+        extract:
+        -   request_name: content.args.name
+        -   request_password: content.args.password
+        name: httpbin_get
+        parameters:
+        -   xx-yy: '[[''spf1'',''666''],[''spf2'',''888'']]'
+        request:
+            headers:
+                accept: application/json
+            method: GET
+            params:
+                commn: $commn_user
+                name: $xx
+                password: $yy
+            url: http://httpbin.org/get
+        variables:
+        -   commn_user: '123'
+-   test:
+        extract:
+        -   r_user: content.form.user
+        -   r_code: status_code
+        name: httpbin_post
+        request:
+            data:
+                user: spf
+            method: POST
+            url: http://httpbin.org/post
+        validate:
+        -   check: $r_user
+            comparator: equals
+            expected: spf
+        -   check: $r_code
+            comparator: equals
+            expected: 200
+-   test:
+        extract:
+        -   request_name: content.args.name
+        -   request_password: content.args.password
+        name: httpbin_get
+        parameters:
+        -   xx-yy: '[[''spf1'',''666''],[''spf2'',''888'']]'
+        request:
+            headers:
+                accept: application/json
+            method: GET
+            params:
+                commn: $commn_user
+                name: $xx
+                password: $yy
+            url: http://httpbin.org/get
+        variables:
+        -   commn_user: '123'
