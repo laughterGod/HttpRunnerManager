@@ -16,14 +16,6 @@
         .has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label {
             color: limegreen;
         }
-        .overlay {
-            background: url({% static "assets/img/main_bg.png" %}) repeat;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: left;
-            float: none;
-            border-radius: 8px;
-        }
     </style>
 </head>
 
@@ -32,7 +24,7 @@
 <div id="preloader" style="background: #fff url({% static "assets/img/loading.GIF" %}) no-repeat center center;"></div>
 <div id="top"></div>
 
-<div class="fullscreen landing parallax" style="background-image:url({% static "assets/img/bg.jpg" %}); background-size: 100% 100%; background-repeat: no-repeat">
+<div class="fullscreen landing parallax" style="background-image:url({% static "assets/img/bg.jpg" %}); background-size: cover; background-repeat: no-repeat">
 
     <div class="overlay">
         <div class="container">
