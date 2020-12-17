@@ -1031,7 +1031,7 @@ and (orientation: landscape) {
     }
 
     #intro h2, #feature-2 h2 {
-        font-weight: 150;
+        font-weight: 100;
         text-align: center;
     }
 
