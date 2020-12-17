@@ -65,5 +65,5 @@ class EnvInfoAdmin(admin.ModelAdmin):
     date_hierarchy = 'update_time'  # 详细时间分层筛选
 
 
-admin.site.site_header = 'HttpRunnerManager运维管理系统'
-admin.site.site_title = 'HttpRunnerManager'
+admin.site.site_header = '运维管理系统'
+admin.site.site_title = '运维管理系统'
