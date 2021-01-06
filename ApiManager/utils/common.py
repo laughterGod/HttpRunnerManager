@@ -189,11 +189,11 @@ def module_info_logic(type=True, **kwargs):
     :param kwargs: dict: 模块信息
     :return:
     """
-    if kwargs.get('module_name') is '':
+    if kwargs.get('module_name') == '':
         return '模块名称不能为空'
     if kwargs.get('belong_project') == '请选择':
         return '请选择项目，没有请先添加哦'
-    if kwargs.get('test_user') is '':
+    if kwargs.get('test_user') == '':
         return '测试人员不能为空'
     return add_module_data(type, **kwargs)
 
@@ -205,15 +205,15 @@ def project_info_logic(type=True, **kwargs):
     :param kwargs: dict: 项目信息
     :return:
     """
-    if kwargs.get('project_name') is '':
+    if kwargs.get('project_name') == '':
         return '项目名称不能为空'
-    if kwargs.get('responsible_name') is '':
+    if kwargs.get('responsible_name') == '':
         return '负责人不能为空'
-    if kwargs.get('test_user') is '':
+    if kwargs.get('test_user') == '':
         return '测试人员不能为空'
-    if kwargs.get('dev_user') is '':
+    if kwargs.get('dev_user') == '':
         return '开发人员不能为空'
-    if kwargs.get('publish_app') is '':
+    if kwargs.get('publish_app') == '':
         return '发布应用不能为空'
 
     return add_project_data(type, **kwargs)
@@ -241,7 +241,7 @@ def case_info_logic(type=True, **kwargs):
 
     else:
         logging.info('用例原始信息: {kwargs}'.format(kwargs=kwargs))
-        if test.get('name').get('case_name') is '':
+        if test.get('name').get('case_name') == '':
             return '用例名称不可为空'
         if test.get('name').get('module') == '请选择':
             return '请选择或者添加模块'
@@ -329,9 +329,9 @@ def config_info_logic(type=True, **kwargs):
         return load_modules(**config)
     else:
         logging.debug('配置原始信息: {kwargs}'.format(kwargs=kwargs))
-        if config.get('name').get('config_name') is '':
+        if config.get('name').get('config_name') == '':
             return '配置名称不可为空'
-        if config.get('name').get('author') is '':
+        if config.get('name').get('author') == '':
             return '创建者不能为空'
         if config.get('name').get('project') == '请选择':
             return '请选择项目'
@@ -404,11 +404,11 @@ def task_logic(**kwargs):
             return load_modules(**kwargs.pop('task'))
         else:
             return load_testsuites(**kwargs.pop('task'))
-    if kwargs.get('name') is '':
+    if kwargs.get('name') == '':
         return '任务名称不可为空'
-    elif kwargs.get('project') is '':
+    elif kwargs.get('project') == '':
         return '请选择一个项目'
-    elif kwargs.get('crontab_time') is '':
+    elif kwargs.get('crontab_time') == '':
         return '定时配置不可为空'
     elif not kwargs.get('module'):
         kwargs.pop('module')
@@ -502,7 +502,7 @@ def get_ajax_msg(msg, success):
     :param success: str：
     :return:
     """
-    return success if msg is 'ok' else msg
+    return success if msg == 'ok' else msg
 
 
 def register_info_logic(**kwargs):

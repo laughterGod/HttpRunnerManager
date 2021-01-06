@@ -260,11 +260,11 @@ def env_data_logic(**kwargs):
         return 'ok'
     index = kwargs.pop('index')
     env_name = kwargs.get('env_name')
-    if env_name is '':
+    if env_name == '':
         return '环境名称不可为空'
-    elif kwargs.get('base_url') is '':
+    elif kwargs.get('base_url') == '':
         return '请求地址不可为空'
-    elif kwargs.get('simple_desc') is '':
+    elif kwargs.get('simple_desc') == '':
         return '请添加环境描述'
 
     if index == 'add':
