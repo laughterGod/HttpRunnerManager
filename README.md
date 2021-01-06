@@ -5,7 +5,7 @@ Design Philosophy
 -----------------
 
 基于HttpRunner的接口自动化测试平台: `HttpRunner`_, `djcelery`_ and `Django`_. HttpRunner手册: http://cn.httprunner.org/
-python3.8.5更佳，不需要解决以下问题，如果是python3.7.X，则看以下问题解决方法。
+
 特别注意：python3.7.6 Django+celery踩坑
 1.报错”from kombu.async.timer import Entry, Timer as Schedule, to_timestamp, logger”，
 
